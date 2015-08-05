@@ -1,0 +1,107 @@
+body {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+body:not(.mobile) {
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.335, 1.05);
+  min-height: 100%;
+  position: absolute;
+}
+
+body.mobile {
+  -webkit-overflow-scrolling: touch;
+}
+
+body.mobile .UIBlock {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+html.UIBlocked {
+  background-color: #333 !important;
+}
+
+html.UIBlocked body {
+  background-color: #FAFAFA !important;
+  position: fixed;
+  overflow: hidden;
+}
+
+html.UIBlocked body:not(.mobile) {
+  transform: scale(0.85);
+}
+
+html.UIBlocked body:not(.mobile) > :first-child {
+  filter: blur(2px);
+}
+
+html.UIBlocked body:not(.mobile) .UIBlock {
+  transform: scale(1.18);
+}
+
+body:not(.mobile) > :first-child {
+  transition: filter 0.25s cubic-bezier(0.175, 0.885, 0.335, 1.05);
+}
+
+.UIBlock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 3000;
+  overflow: hidden;
+}
+
+.UIBlock .spinner {
+  width: 70px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  left: calc(50% - 35px);
+}
+
+.UIBlock .spinner div {
+  width: 18px;
+  height: 18px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 100%;
+  display: inline-block;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+
+.UIBlock .spinner p.message {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.UIBlock .spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.UIBlock .spinner .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes bouncedelay{
+	0% {
+		transform: scale(0.0);
+	}
+	40% {
+		transform: scale(1.0);
+	}
+	80%{
+		transform: scale(0.0);
+	}
+	100%{
+		transform: scale(0.0);
+	}
+}
