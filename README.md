@@ -1,5 +1,6 @@
 I've made version for working without scss/coffeescript but change to jade/less
 All credit give to [ostrio:uiblocker](https://atmospherejs.com/ostrio/uiblocker)
+=============
 
 UI blocker and simple loading spinner for Meteor apps
 =============
