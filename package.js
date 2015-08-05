@@ -1,6 +1,6 @@
 Package.describe({
   name: 'whytobe:uiload',
-  version: '0.0.3',
+  version: '0.0.4',
   summary: 'A package for loading ui. Fork from osrio:uiblocker for none scss/coffee',
   git: 'https://github.com/whytobe/uiload',
   documentation: 'README.md'
